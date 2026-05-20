@@ -12,6 +12,9 @@ st.set_page_config(page_title="Support Ticket RAG Evaluator", layout="wide")
 def load_rag():
     try:
         return RAGPipeline()
+    except ValueError as ve:
+        st.error(str(ve))
+        return None
     except Exception as e:
         st.error(f"Failed to load RAG pipeline. Did you run the ingestion and vectorstore scripts? Error: {e}")
         return None
@@ -40,6 +43,8 @@ def main():
                     
                     if result['status'] == 'refused':
                         st.warning(result['answer'])
+                    elif result['status'] == 'error':
+                        st.error(result['answer'])
                     else:
                         st.success(result['answer'])
                         

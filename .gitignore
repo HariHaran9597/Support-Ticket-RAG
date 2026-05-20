@@ -3,7 +3,4 @@ __pycache__/
 .env
 data/raw/
 data/processed/
-artifacts/
-eval/results.csv
-eval/eval_questions.csv
 .DS_Store

@@ -1,0 +1,29 @@
+question,expected_ticket_id,expected_category
+wanna locate purchase {{Order Number}} can i get some help,TICKET_0521,ORDER
+I do not know how I can check your allowed payment options,TICKET_0737,PAYMENT
+I need assistance to enter another shipping address,TICKET_0740,SHIPPING
+i do not know how to file a customer complaint,TICKET_0660,FEEDBACK
+"I have got to notify of registration problems, help me",TICKET_0411,ACCOUNT
+can I order from {{Delivery City}}?,TICKET_0678,DELIVERY
+is it possible to talk to customer service,TICKET_0626,CONTACT
+I want assistance settnig up the delivery address,TICKET_0513,SHIPPING
+I expect a bloody reimbursement of {{Refund Amount}} dollars,TICKET_0859,REFUND
+where could I inform of issues with payment?,TICKET_0136,PAYMENT
+can i check the withdrawal penalty,TICKET_0811,CANCEL
+I want help to get refunds,TICKET_0076,REFUND
+help me canceling purchase {{Order Number}},TICKET_0636,ORDER
+I want assistance to take a quick look at bill #85632,TICKET_0973,INVOICE
+"I have got to submit the secondary shipping address, help me",TICKET_0938,SHIPPING
+I'd like to purcjase several of ur item help me,TICKET_0899,ORDER
+I want to correct purchase {{Order Number}},TICKET_0280,ORDER
+I am trying to retrieve the PIN of my user profile,TICKET_0883,ACCOUNT
+i want help retrieving the access key of my account,TICKET_0761,ACCOUNT
+changing details on {{Account Type}} account,TICKET_0319,ACCOUNT
+can i place an order from {{Delivery City}},TICKET_0549,DELIVERY
+i want help to ask for compensatiuons,TICKET_0174,REFUND
+I want help to contact an assistant,TICKET_0371,CONTACT
+I can't check purchase {{Order Number}} status,TICKET_0527,ORDER
+i cant speak with a person,TICKET_0210,CONTACT
+What is the recipe for chocolate cake?,,
+Who won the World Cup in 2022?,,
+How do I bake a chocolate chip cookie?,,

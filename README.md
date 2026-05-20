@@ -6,7 +6,9 @@
 [![Model](https://img.shields.io/badge/LLM-Qwen--3--32B-purple)](https://groq.com/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-An enterprise-ready **Retrieval-Augmented Generation (RAG)** system designed to resolve customer support tickets. Traditional chatbots often hallucinate, which is unacceptable in customer-facing support roles. This application enforces strict **grounding, citation tracking, and confidence-based refusal** to ensure every answer is backed by actual ticket history. It also features a fully interactive **Evaluation Dashboard** tracking RAG retrieval accuracy and response latency.
+![Dashboard Screenshot](screenshots/demo_ui.png)
+
+A deployable **Retrieval-Augmented Generation (RAG)** prototype system designed to resolve customer support tickets. Traditional chatbots often hallucinate, which is unacceptable in customer-facing support roles. This application enforces strict **grounding, citation tracking, and confidence-based refusal** to ensure every answer is backed by actual ticket history. It also features a fully interactive **Evaluation Dashboard** tracking RAG retrieval accuracy and response latency.
 
 ---
 
@@ -169,15 +171,8 @@ Streamlit Cloud is the easiest way to deploy this application for free.
 
 ### Step-by-Step Instructions:
 
-1. **Commit your Local Data and Index (Optional):**
-   The `.gitignore` ignores the FAISS files by default to keep the repo clean. However, for Streamlit Cloud to run without running the ingestion pipeline on the server, you should push the generated index and parquet files. 
-   
-   To do this, temporarily modify your `.gitignore` to comment out `artifacts/` or run:
-   ```bash
-   git add artifacts/faiss.index artifacts/metadata.parquet eval/results.csv
-   git commit -m "Add index artifacts for deployment"
-   git push origin main
-   ```
+1. **Model Artifacts & Results are Pre-committed:**
+   For convenience and immediate demo startup, the model artifacts (`artifacts/faiss.index` and `artifacts/metadata.parquet`) along with the evaluation files (`eval/eval_questions.csv` and `eval/results.csv`) are already committed to the repository. This allows Streamlit Cloud to run the RAG pipeline instantly and display evaluation results without requiring pipeline execution on the server.
 
 2. **Deploy via Streamlit Share:**
    * Go to [share.streamlit.io](https://share.streamlit.io/) and log in with your GitHub account.

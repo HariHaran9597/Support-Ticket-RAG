@@ -16,8 +16,7 @@ class RAGPipeline:
         self.encoder = SentenceTransformer('all-MiniLM-L6-v2')
         api_key = os.getenv("GROQ_API_KEY")
         if not api_key:
-            print("Warning: GROQ_API_KEY not found in environment variables. Using dummy key.")
-            api_key = "dummy_key"
+            raise ValueError("GROQ_API_KEY is missing. Add it in your .env file or Streamlit secrets.")
         self.client = Groq(api_key=api_key)
         self.model = "qwen/qwen3-32b"
         
@@ -73,15 +72,19 @@ class RAGPipeline:
                 temperature=0.0
             )
             answer = chat_completion.choices[0].message.content
+            status = "answered"
+            citations = [doc['ticket_id'] for doc in retrieved]
         except Exception as e:
             answer = f"Error calling LLM: {str(e)}"
+            status = "error"
+            citations = []
             
         return {
             "answer": answer,
-            "citations": [doc['ticket_id'] for doc in retrieved],
+            "citations": citations,
             "retrieved": retrieved,
             "latency": time.time() - start_time,
-            "status": "answered"
+            "status": status
         }
 
 if __name__ == "__main__":
