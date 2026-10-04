@@ -1,12 +1,19 @@
 # 🎫 Support Ticket RAG Evaluator
 
 [![Python 3.10+](https://img.shields.io/badge/Python-3.10%2B-blue.svg)](https://www.python.org/)
-[![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://streamlit.io/)
+[![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://support-ticket-rag.streamlit.app/)
 [![FAISS](https://img.shields.io/badge/Vector%20DB-FAISS-green)](https://github.com/facebookresearch/faiss)
 [![Model](https://img.shields.io/badge/LLM-Qwen--3--32B-purple)](https://groq.com/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 ![Dashboard Screenshot](screenshots/demo_ui.png)
+
+[Try the public demo](https://support-ticket-rag.streamlit.app/)
+
+**Status:** portfolio prototype on a public historical-ticket dataset. The evaluation has
+28 questions, including only three out-of-domain checks. Reported refusal accuracy applies
+to those checks, not arbitrary inputs; grounding and citation checks do not guarantee correct
+answers. No customer adoption or support-resolution impact is claimed.
 
 A deployable **Retrieval-Augmented Generation (RAG)** prototype system designed to resolve customer support tickets. Traditional chatbots often hallucinate, which is unacceptable in customer-facing support roles. This application enforces strict **grounding, citation tracking, and confidence-based refusal** to ensure every answer is backed by actual ticket history. It also features a fully interactive **Evaluation Dashboard** tracking RAG retrieval accuracy and response latency.
 
